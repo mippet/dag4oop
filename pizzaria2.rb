@@ -1,6 +1,8 @@
 require './Waiter'
+require './Menu'
 
-w = Waiter.new
+w = Waiter.new(menu)
+menu = Menu.new
 
 w.greet_guest
 

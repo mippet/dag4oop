@@ -15,10 +15,21 @@ class Waiter
     case order_number
     when 1
       p "let me get the menu"
+      list_menu
     when 2
       p "thank you for your visit"
     else
       p "I really don't understand"
+    end
+  end
+
+  def initialize (menu)
+    @menu = menu
+  end
+
+  def list_menu
+    @menu.contents.each do |dish|
+      p "#{dish}"
     end
   end
 end
