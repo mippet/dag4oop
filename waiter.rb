@@ -1,5 +1,5 @@
 class Waiter
   def greet_guest
-    p "good day, welcome to our lovely restaurant"
+    p "Good day, welcome to our lovely restaurant"
   end
 end
