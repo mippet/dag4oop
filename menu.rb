@@ -1,7 +1,7 @@
 require './Dish'
 
 class Menu
-  def initialize (dish_name)
+  def initialize
     @menu = []
     @menu << Dish.new("Margherita")
     @menu << Dish.new("Napoletana")
@@ -10,5 +10,5 @@ class Menu
 
   def contents
     @menu
-  end 
+  end
 end

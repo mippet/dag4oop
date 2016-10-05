@@ -1,5 +1,9 @@
 class Dish
-  def initialize (dish_name)
-    @dish_name = dish_name
+  def initialize (name)
+    @name = name
+    end
+
+  def name
+    @name
   end
 end

@@ -28,8 +28,8 @@ class Waiter
   end
 
   def list_menu
-    @menu.contents.each do |dish|
-      p "#{dish}"
-    end
+  @menu.contents.each do |recipe|
+    p "#{recipe.name}"
   end
+end
 end
