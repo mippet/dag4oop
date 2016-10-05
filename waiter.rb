@@ -11,11 +11,12 @@ class Waiter
     take_order(choice)
   end
 
-  def take_order (order_number)
+  def take_order(order_number)
     case order_number
     when 1
       p "let me get the menu"
       list_menu
+      order_food(gets.chomp.to_i)
     when 2
       p "thank you for your visit"
     else
@@ -23,13 +24,19 @@ class Waiter
     end
   end
 
-  def initialize (menu)
+  def initialize(menu, kitchen)
     @menu = menu
+    @kitchen = kitchen
   end
 
   def list_menu
-  @menu.contents.each do |recipe|
-    p "#{recipe.name}"
+    @menu.contents.each_with_index do |recipe, index|
+      p "#{index + 1}: #{recipe.name}"
+    end
   end
-end
+
+  def order_food(choice)
+    dish = @menu.contents[choice]
+    @kitchen.order(dish)
+  end
 end
